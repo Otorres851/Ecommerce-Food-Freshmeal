@@ -3,58 +3,74 @@
     <div class="container">
       <h1 class="section-heading">{{ t("sections.topProducts") }}</h1>
 
-      <div class="slider">
-        <button class="slider-btn prev-btn">
-          <img :src="prevIcon" alt="Previous" />
-        </button>
-
-        <button class="slider-btn next-btn">
-          <img :src="nextIcon" alt="Next" />
-        </button>
-
-        <Swiper
-          class="food-slider"
-          :modules="modules"
-          :slides-per-view="3"
-          :slides-per-group="1"
-          :space-between="24"
-          :loop="recipes.length > 3"
-          :speed="900"
-          :autoplay="{
-            delay: 2500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }"
-          :navigation="{
-            prevEl: '.prev-btn',
-            nextEl: '.next-btn',
-          }"
-          :breakpoints="{
-            0: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            992: { slidesPerView: 3 },
-          }"
-        >
-          <SwiperSlide v-for="recipe in recipes" :key="recipe.id">
-            <ProductCard
-              :product="{
-                id: recipe.id,
-                name: recipe.name,
-                price: getFakePrice(recipe.caloriesPerServing),
-                image: recipe.image,
-                rating: normalizeRating(recipe.rating),
-              }"
-              :subtitle="recipe.cuisine || recipe.difficulty || 'Recipe'"
-              :time="getTime(recipe.prepTimeMinutes, recipe.cookTimeMinutes)"
-            />
-          </SwiperSlide>
-        </Swiper>
+      <div v-if="loading" class="products-feedback">
+        Loading featured recipes...
       </div>
 
-      <div class="text-center btn-wrapper">
-        <button class="btn btn-secondary">{{ t("common.viewMore") }}</button>
+      <div v-else-if="errorMessage" class="products-feedback error">
+        <p>{{ errorMessage }}</p>
+        <button class="btn btn-secondary" @click="loadRecipes">
+          Try again
+        </button>
       </div>
+
+      <template v-else>
+        <div class="slider">
+          <button class="slider-btn prev-btn">
+            <img :src="prevIcon" alt="Previous" />
+          </button>
+
+          <button class="slider-btn next-btn">
+            <img :src="nextIcon" alt="Next" />
+          </button>
+
+          <Swiper
+            class="food-slider"
+            :modules="modules"
+            :slides-per-view="3"
+            :slides-per-group="1"
+            :space-between="24"
+            :loop="recipes.length > 3"
+            :speed="900"
+            :autoplay="{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }"
+            :navigation="{
+              prevEl: '.prev-btn',
+              nextEl: '.next-btn',
+            }"
+            :breakpoints="{
+              0: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              992: { slidesPerView: 3 },
+            }"
+          >
+            <SwiperSlide v-for="recipe in recipes" :key="recipe.id">
+              <ProductCard
+                :product="{
+                  id: recipe.id,
+                  name: recipe.name,
+                  price: getPrice(recipe.caloriesPerServing),
+                  image: recipe.image,
+                  rating: normalizeRating(recipe.rating),
+                }"
+                :subtitle="recipe.cuisine || recipe.difficulty || 'Recipe'"
+                :time="getTime(recipe.prepTimeMinutes, recipe.cookTimeMinutes)"
+                @view-details="openRecipe(recipe)"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+
+        <div class="text-center btn-wrapper">
+          <button class="btn btn-secondary">{{ t("common.viewMore") }}</button>
+        </div>
+      </template>
     </div>
+
+    <RecipeModal v-model="showRecipeModal" :recipe="selectedRecipe" />
   </section>
 </template>
 
@@ -67,6 +83,7 @@ import { onMounted, ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 import ProductCard from "@/components/common/ProductCard.vue";
+import RecipeModal from "@/components/common/RecipeModal.vue";
 import { fetchRecipes } from "@/services/recipes";
 import type { Recipe } from "@/types/recipe";
 
@@ -77,6 +94,10 @@ const { t } = useI18n();
 const modules = [Navigation, Autoplay];
 
 const recipes = ref<Recipe[]>([]);
+const loading = ref(false);
+const errorMessage = ref("");
+const showRecipeModal = ref(false);
+const selectedRecipe = ref<Recipe | null>(null);
 
 const normalizeRating = (rating?: number) => {
   if (!rating) return 4;
@@ -87,7 +108,7 @@ const normalizeRating = (rating?: number) => {
   return 1;
 };
 
-const getFakePrice = (calories?: number) => {
+const getPrice = (calories?: number) => {
   const base = calories ? Math.max(12000, calories * 40) : 18000;
   return Math.round(base / 100) * 100;
 };
@@ -97,11 +118,26 @@ const getTime = (prep?: number, cook?: number) => {
   return total ? `${total} min` : "";
 };
 
-onMounted(async () => {
+const openRecipe = (recipe: Recipe) => {
+  selectedRecipe.value = recipe;
+  showRecipeModal.value = true;
+};
+
+const loadRecipes = async () => {
+  loading.value = true;
+  errorMessage.value = "";
+
   try {
     recipes.value = await fetchRecipes(6);
   } catch (error) {
-    console.error("Error loading recipes:", error);
+    errorMessage.value =
+      error instanceof Error ? error.message : "Could not load recipes.";
+  } finally {
+    loading.value = false;
   }
+};
+
+onMounted(() => {
+  loadRecipes();
 });
 </script>

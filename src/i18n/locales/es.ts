@@ -11,6 +11,7 @@ export default {
     hours: "Horas",
     minutes: "Minutos",
     seconds: "Segundos",
+    viewDetails: "Ver receta",
   },
   nav: {
     home: "Inicio",

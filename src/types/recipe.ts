@@ -8,4 +8,9 @@ export interface Recipe {
   prepTimeMinutes?: number;
   cookTimeMinutes?: number;
   caloriesPerServing?: number;
+  ingredients?: string[];
+  instructions?: string[];
+  mealType?: string[];
+  tags?: string[];
+  servings?: number;
 }

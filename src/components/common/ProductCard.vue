@@ -2,8 +2,14 @@
   <div class="food-card magic-shadow-sm">
     <div class="card-badge" v-if="subtitle">{{ subtitle }}</div>
 
-    <div class="product-image flex items-center justify-center">
+    <div
+      class="product-image flex items-center justify-center clickable"
+      @click="$emit('view-details')"
+    >
       <img :src="product.image" :alt="product.name" />
+      <div class="image-overlay">
+        {{ t("common.viewDetails") }}
+      </div>
     </div>
 
     <hr />
@@ -33,11 +39,13 @@
         {{ product.price.toLocaleString(locale === "es" ? "es-CO" : "en-US") }}
       </div>
 
-      <div class="flex justify-center">
-        <button @click="addItem">
-          <i class="material-icons">shopping_cart</i>
-          <span>{{ t("common.addToCart") }}</span>
-        </button>
+      <div class="product-actions">
+        <div class="flex justify-center">
+          <button @click="addItem">
+            <i class="material-icons">shopping_cart</i>
+            <span>{{ t("common.addToCart") }}</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -54,6 +62,10 @@ const props = defineProps<{
   product: Product;
   subtitle?: string;
   time?: string;
+}>();
+
+defineEmits<{
+  (e: "view-details"): void;
 }>();
 
 const cart = useCartStore();
