@@ -1,13 +1,17 @@
 <template>
   <div class="food-card magic-shadow-sm">
+    <div class="card-badge" v-if="subtitle">{{ subtitle }}</div>
+
     <div class="product-image flex items-center justify-center">
       <img :src="product.image" :alt="product.name" />
     </div>
 
     <hr />
 
-    <div>
+    <div class="card-body">
       <h2 class="text-center">{{ product.name }}</h2>
+
+      <p v-if="time" class="product-time text-center">{{ time }}</p>
 
       <div class="stars flex justify-center items-center">
         <img
@@ -48,6 +52,8 @@ import { useI18n } from "vue-i18n";
 
 const props = defineProps<{
   product: Product;
+  subtitle?: string;
+  time?: string;
 }>();
 
 const cart = useCartStore();
