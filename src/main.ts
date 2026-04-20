@@ -1,4 +1,4 @@
-import "@/assets/styles/main.scss";
+import "@/assets/styles/base/main.scss";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "material-icons/iconfont/material-icons.css";
 import { createPinia } from "pinia";

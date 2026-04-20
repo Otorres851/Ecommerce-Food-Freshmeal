@@ -1,11 +1,11 @@
 <template>
-  <div class="food-card magic-shadow-sm">
+  <div
+    class="food-card magic-shadow-sm clickable-card"
+    @click="$emit('view-details')"
+  >
     <div class="card-badge" v-if="subtitle">{{ subtitle }}</div>
 
-    <div
-      class="product-image flex items-center justify-center clickable"
-      @click="$emit('view-details')"
-    >
+    <div class="product-image flex items-center justify-center">
       <img :src="product.image" :alt="product.name" />
       <div class="image-overlay">
         {{ t("common.viewDetails") }}
@@ -39,13 +39,11 @@
         {{ product.price.toLocaleString(locale === "es" ? "es-CO" : "en-US") }}
       </div>
 
-      <div class="product-actions">
-        <div class="flex justify-center">
-          <button @click="addItem">
-            <i class="material-icons">shopping_cart</i>
-            <span>{{ t("common.addToCart") }}</span>
-          </button>
-        </div>
+      <div class="flex justify-center">
+        <button @click.stop="addItem">
+          <i class="material-icons">shopping_cart</i>
+          <span>{{ t("common.addToCart") }}</span>
+        </button>
       </div>
     </div>
   </div>

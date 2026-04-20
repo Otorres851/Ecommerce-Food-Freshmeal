@@ -39,8 +39,9 @@ export default {
   },
   hero: {
     welcome: "Welcome to",
-    title: "The World Best Shopping Website",
-    highlighted: "Shopping",
+    titleBefore: "Discover ",
+    highlighted: "Flavors",
+    titleAfter: " From Around The World",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy.",
     readMore: "Read More",
@@ -66,9 +67,14 @@ export default {
       "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden Sydney College in Virginia, The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
   },
   services: {
-    deliveryTitle: "Free Home delivery",
-    deliveryText:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    deliveryTitle: "Fast Delivery",
+    deliveryText: "We deliver your food fresh and hot to your doorstep.",
+
+    freshFoodTitle: "Fresh Ingredients",
+    freshFoodText: "We use only high-quality and fresh ingredients.",
+
+    supportTitle: "24/7 Support",
+    supportText: "Our team is always available to help you.",
     returnTitle: "30 Days Return Services",
     returnText:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",

@@ -39,8 +39,9 @@ export default {
   },
   hero: {
     welcome: "Bienvenido a",
-    title: "La mejor tienda del mundo",
-    highlighted: "tienda",
+    titleBefore: "Descubre ",
+    highlighted: "Sabores",
+    titleAfter: " Del Mundo",
     description:
       "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto estándar de la industria.",
     readMore: "Leer más",
@@ -65,9 +66,15 @@ export default {
       "Contrario a la creencia popular, Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raíces en una obra de literatura clásica latina del año 45 a.C., lo que lo hace tener más de 2000 años de antigüedad. Richard McClintock, profesor de latín en el Hampden Sydney College en Virginia, encontró este texto. El fragmento estándar de Lorem Ipsum utilizado desde el siglo XVI se reproduce a continuación para quienes estén interesados.",
   },
   services: {
-    deliveryTitle: "Entrega a domicilio gratis",
-    deliveryText:
-      "Lorem Ipsum es simplemente texto de relleno de la industria de impresión y tipografía.",
+    deliveryTitle: "Entrega rápida",
+    deliveryText: "Llevamos tu comida fresca y caliente a tu puerta.",
+
+    freshFoodTitle: "Ingredientes frescos",
+    freshFoodText: "Usamos solo ingredientes frescos y de alta calidad.",
+
+    supportTitle: "Soporte 24/7",
+    supportText:
+      "Nuestro equipo está disponible para ayudarte en todo momento.",
     returnTitle: "30 días de devoluciones",
     returnText:
       "Lorem Ipsum es simplemente texto de relleno de la industria de impresión y tipografía.",
