@@ -39,7 +39,10 @@
           {{ t("nav.about") }}
         </RouterLink>
 
-        <a href="#">{{ t("nav.products") }}</a>
+        <RouterLink to="/products" class="nav-link" active-class="active">
+          {{ t("nav.products") }}
+        </RouterLink>
+
         <a href="#">{{ t("nav.blog") }}</a>
         <a href="#">{{ t("nav.shop") }}</a>
         <a href="#">{{ t("nav.services") }}</a>

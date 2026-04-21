@@ -156,4 +156,18 @@ export default {
     ctaText: "Únete a nuestra comunidad y descubre un mundo de sabores.",
     ctaBtn: "Ordena ahora",
   },
+  productsPage: {
+    backHome: "Volver al inicio",
+    kicker: "Nuestro menú",
+    title: "Descubre nuestros productos",
+    description:
+      "Explora una selección de platos preparados con ingredientes frescos, recetas únicas y sabores del mundo pensados para cada ocasión.",
+    featuredTitle: "Nuestros productos destacados",
+    loading: "Cargando productos...",
+    tryAgain: "Intentar de nuevo",
+    error: "No se pudieron cargar los productos.",
+    defaultDescription:
+      "Receta preparada con ingredientes frescos y sabores únicos.",
+    viewMore: "Ver más productos",
+  },
 };

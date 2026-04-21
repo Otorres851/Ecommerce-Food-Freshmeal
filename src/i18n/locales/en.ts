@@ -154,4 +154,18 @@ export default {
     ctaText: "Join our community and discover a world of flavors.",
     ctaBtn: "Order now",
   },
+  productsPage: {
+    backHome: "Back to home",
+    kicker: "Our menu",
+    title: "Discover our products",
+    description:
+      "Explore a selection of dishes made with fresh ingredients, unique recipes, and flavors from around the world for every occasion.",
+    featuredTitle: "Our featured products",
+    loading: "Loading products...",
+    tryAgain: "Try again",
+    error: "Could not load products.",
+    defaultDescription:
+      "Recipe prepared with fresh ingredients and unique flavors.",
+    viewMore: "View more products",
+  },
 };
