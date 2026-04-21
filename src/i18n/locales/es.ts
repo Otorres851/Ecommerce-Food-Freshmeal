@@ -61,9 +61,10 @@ export default {
     instagram: "Instagram",
   },
   about: {
-    title: "Freshmeal es un hecho establecido de que un lector se distraerá",
+    title:
+      "FreshMeal es una plataforma gastronómica que combina ingredientes frescos, recetas únicas y sabores del mundo.",
     description:
-      "En FreshMeal creamos experiencias gastronómicas inspiradas en los sabores del mundo. Seleccionamos cuidadosamente cada ingrediente para ofrecerte platos frescos, equilibrados y llenos de sabor.Desde recetas tradicionales hasta propuestas modernas, nuestra misión es acercarte a distintas culturas a través de la comida, sin salir de casa..",
+      "En FreshMeal creamos experiencias gastronómicas inspiradas en los sabores del mundo. Seleccionamos cuidadosamente cada ingrediente para ofrecerte platos frescos, equilibrados y llenos de sabor. Desde recetas tradicionales hasta propuestas modernas, nuestra misión es acercarte a distintas culturas a través de la comida, sin salir de casa.",
   },
   services: {
     deliveryTitle: "Entrega rápida",
@@ -75,22 +76,28 @@ export default {
     supportTitle: "Soporte 24/7",
     supportText:
       "Nuestro equipo está disponible para ayudarte en todo momento.",
-    returnTitle: "30 días de devoluciones",
-    returnText:
-      "Lorem Ipsum es simplemente texto de relleno de la industria de impresión y tipografía.",
-    moneyTitle: "Garantía de devolución",
-    moneyText:
-      "Lorem Ipsum es simplemente texto de relleno de la industria de impresión y tipografía.",
+  },
+  blog: {
+    article1: {
+      title: "Descubre sabores frescos en cada bocado",
+      description:
+        "En FreshMeal creemos que cada plato debe ser una experiencia. Nuestras recetas combinan ingredientes frescos e inspiración global para llevar sabores únicos a tu mesa.",
+    },
+    article2: {
+      title: "Dulces momentos para disfrutar",
+      description:
+        "Descubre nuestros postres y galletas preparados con ingredientes de calidad, perfectos para acompañar tus mejores momentos.",
+    },
   },
   subscribe: {
     title: "Suscríbete a nuestro boletín",
     description:
-      "Lorem Ipsum como su texto modelo por defecto, y una búsqueda de lorem ipsum descubrirá muchos sitios web aún en su infancia.",
+      "Recibe novedades, promociones especiales y recomendaciones de nuestros platos más destacados directamente en tu correo.",
     placeholder: "email{'@'}freshmeal.com",
   },
   footer: {
     aboutText:
-      "Se popularizó en la década de 1960 con la publicación de hojas de Letraset que contenían pasajes de Lorem Ipsum.",
+      "FreshMeal reúne ingredientes frescos, recetas auténticas y sabores del mundo para ofrecerte una experiencia única en cada plato.",
     copyright:
       "Copyright © 2026. Todos los derechos reservados por Oscar Torres-Portfolio.",
   },

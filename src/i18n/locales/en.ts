@@ -41,7 +41,7 @@ export default {
     welcome: "Welcome to",
     titleBefore: "Discover ",
     highlighted: "Flavors",
-    titleAfter: " From Around The World",
+    titleAfter: " Around The World",
     description:
       "Every dish at FreshMeal tells a story. We draw inspiration from recipes across cultures to create unique experiences that connect flavors, emotions, and special moments.",
     readMore: "Read More",
@@ -62,9 +62,9 @@ export default {
   },
   about: {
     title:
-      "Freshmeal is a long established fact that a reader will be distracted",
+      "FreshMeal is a culinary platform that combines fresh ingredients, unique recipes, and global flavors.",
     description:
-      "At FreshMeal, we create culinary experiences inspired by flavors from around the world. We carefully select each ingredient to offer you fresh, balanced, and flavorful dishes.From traditional recipes to modern creations, our mission is to bring you closer to different cultures through food, without you having to leave home..",
+      "At FreshMeal, we create culinary experiences inspired by flavors from around the world. We carefully select each ingredient to offer you fresh, balanced, and flavorful dishes. From traditional recipes to modern creations, our mission is to bring you closer to different cultures through food, without leaving home.",
   },
   services: {
     deliveryTitle: "Fast Delivery",
@@ -75,22 +75,28 @@ export default {
 
     supportTitle: "24/7 Support",
     supportText: "Our team is always available to help you.",
-    returnTitle: "30 Days Return Services",
-    returnText:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    moneyTitle: "Money Back Guaranteed",
-    moneyText:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+  blog: {
+    article1: {
+      title: "Discover Fresh Flavors in Every Bite",
+      description:
+        "At FreshMeal, we believe every dish should be an experience. Our recipes combine fresh ingredients and global inspiration to bring unique flavors straight to your table.",
+    },
+    article2: {
+      title: "Sweet Moments to Enjoy",
+      description:
+        "Discover our desserts and cookies made with quality ingredients, perfect for enjoying your favorite moments.",
+    },
   },
   subscribe: {
     title: "Subscribe to your newsletter",
     description:
-      "Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy.",
+      "Get updates, special promotions, and recommendations for our most popular dishes delivered straight to your inbox.",
     placeholder: "email{'@'}freshmeal.com",
   },
   footer: {
     aboutText:
-      "It was popularised in the 1960 with the release of Latest sheets containing Lorem Ipsum passage.",
+      "FreshMeal brings together fresh ingredients, authentic recipes, and global flavors to offer you a unique experience in every dish.",
     copyright:
       "Copyright © 2026. All rights reserved by Oscar Torres-Portfolio.",
   },
