@@ -1,7 +1,7 @@
 export default {
   common: {
     readMore: "Leer más",
-    shopNow: "Comprar ahora",
+    shopNow: "Ordena ahora",
     viewMore: "Ver más",
     viewAll: "Ver todo",
     addToCart: "Agregar al carrito",

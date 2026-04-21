@@ -1,7 +1,7 @@
 export default {
   common: {
     readMore: "Read More",
-    shopNow: "Shop Now",
+    shopNow: "Order Now",
     viewMore: "View More",
     viewAll: "View All",
     addToCart: "Add to cart",
