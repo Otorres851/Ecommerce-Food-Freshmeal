@@ -45,7 +45,7 @@ export default {
     description:
       "Every dish at FreshMeal tells a story. We draw inspiration from recipes across cultures to create unique experiences that connect flavors, emotions, and special moments.",
     readMore: "Read More",
-    shopNow: "Shop Now",
+    shopNow: "Order Now",
   },
   sections: {
     topProducts: "Top products",
