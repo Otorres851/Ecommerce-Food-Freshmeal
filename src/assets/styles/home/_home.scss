@@ -133,7 +133,8 @@ nav .top .time span {
   color: $primary;
 }
 
-nav .navbar a {
+nav .navbar a,
+nav .navbar .nav-link {
   text-decoration: none;
   color: $secondary;
   font-family: "Raleway-semibold";
@@ -142,12 +143,14 @@ nav .navbar a {
   transition: all 0.3s ease;
 }
 
-nav .navbar a.active {
+nav .navbar a.active,
+nav .navbar .nav-link.active {
   background: $primary;
   color: $pure;
 }
 
-nav .navbar a:hover {
+nav .navbar a:hover,
+nav .navbar .nav-link:hover {
   background: $primary;
   color: $pure;
 }

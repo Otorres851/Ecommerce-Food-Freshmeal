@@ -26,8 +26,19 @@
 
     <div class="navbar magic-shadow">
       <div class="container flex justify-center">
-        <a href="#" class="active">{{ t("nav.home") }}</a>
-        <a href="#">{{ t("nav.about") }}</a>
+        <RouterLink
+          to="/"
+          class="nav-link"
+          active-class="active"
+          exact-active-class="active"
+        >
+          {{ t("nav.home") }}
+        </RouterLink>
+
+        <RouterLink to="/about" class="nav-link" active-class="active">
+          {{ t("nav.about") }}
+        </RouterLink>
+
         <a href="#">{{ t("nav.products") }}</a>
         <a href="#">{{ t("nav.blog") }}</a>
         <a href="#">{{ t("nav.shop") }}</a>
