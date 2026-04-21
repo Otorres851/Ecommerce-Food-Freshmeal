@@ -50,22 +50,20 @@ const { t } = useI18n();
 const articles: Article[] = [
   {
     id: 1,
-    date: "July 03, 2017",
+    date: "July 03, 2024",
     author: "FreshMeal",
     comments: 12,
-    title: "Lorem Ipsum is simply dummy text of the printing",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has more letters.",
+    title: t("blog.article1.title"),
+    description: t("blog.article1.description"),
     image: coffee,
   },
   {
     id: 2,
-    date: "July 03, 2017",
+    date: "July 10, 2024",
     author: "FreshMeal",
-    comments: 12,
-    title: "Lorem Ipsum is simply dummy text of the printing",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has more letters.",
+    comments: 8,
+    title: t("blog.article2.title"),
+    description: t("blog.article2.description"),
     image: donut,
   },
 ];
