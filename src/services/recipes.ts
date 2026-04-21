@@ -50,9 +50,9 @@ export async function fetchRecipes(limit = 6): Promise<Recipe[]> {
     }));
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      throw new Error(error.message || "Error al cargar recetas");
+      throw new Error(error.message || "Error loading recipes");
     }
 
-    throw new Error("Error inesperado al cargar recetas");
+    throw new Error("Unexpected error loading recipes");
   }
 }
