@@ -7,9 +7,9 @@
       </div>
 
       <h1>
-        {{ titleBefore }}
+        {{ t("hero.titleBefore") }}
         <span>{{ t("hero.highlighted") }}</span>
-        {{ titleAfter }}
+        {{ t("hero.titleAfter") }}
       </h1>
 
       <p>{{ t("hero.description") }}</p>
@@ -29,16 +29,7 @@
 <script setup lang="ts">
 import logo2 from "@/assets/icons/logo-2.svg";
 import straw from "@/assets/images/straw.png";
-import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-const { t, locale } = useI18n();
-
-const titleBefore = computed(() => {
-  return locale.value === "es" ? "La mejor " : "The World Best ";
-});
-
-const titleAfter = computed(() => {
-  return locale.value === "es" ? " del mundo" : " Website";
-});
+const { t } = useI18n();
 </script>

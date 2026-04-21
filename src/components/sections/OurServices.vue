@@ -56,15 +56,15 @@ const services = computed(() => [
   },
   {
     id: 2,
-    icon: "shopping_bag",
-    title: t("services.returnTitle"),
-    text: t("services.returnText"),
+    icon: "restaurant",
+    title: t("services.freshFoodTitle"),
+    text: t("services.freshFoodText"),
   },
   {
     id: 3,
-    icon: "paid",
-    title: t("services.moneyTitle"),
-    text: t("services.moneyText"),
+    icon: "support_agent",
+    title: t("services.supportTitle"),
+    text: t("services.supportText"),
   },
 ]);
 </script>
