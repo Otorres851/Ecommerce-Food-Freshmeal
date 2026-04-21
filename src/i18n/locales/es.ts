@@ -45,7 +45,7 @@ export default {
     description:
       "Cada plato en FreshMeal cuenta una historia. Nos inspiramos en recetas de distintas culturas para crear experiencias únicas que conectan sabores, emociones y momentos especiales.",
     readMore: "Leer más",
-    shopNow: "Comprar ahora",
+    shopNow: "Ordena ahora",
   },
   sections: {
     topProducts: "Productos destacados",
