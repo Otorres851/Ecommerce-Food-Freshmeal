@@ -50,7 +50,7 @@ const { t } = useI18n();
 const articles: Article[] = [
   {
     id: 1,
-    date: "July 03, 2024",
+    date: "July 03, 2025",
     author: "FreshMeal",
     comments: 12,
     title: t("blog.article1.title"),
@@ -59,7 +59,7 @@ const articles: Article[] = [
   },
   {
     id: 2,
-    date: "July 10, 2024",
+    date: "July 10, 2025",
     author: "FreshMeal",
     comments: 8,
     title: t("blog.article2.title"),
