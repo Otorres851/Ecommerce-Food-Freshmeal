@@ -15,7 +15,9 @@
       <p>{{ t("hero.description") }}</p>
 
       <div>
-        <button class="btn btn-primary">{{ t("hero.readMore") }}</button>
+        <button class="btn btn-primary" @click="goToAbout">
+          {{ t("hero.readMore") }}
+        </button>
         <button class="btn btn-secondary">{{ t("hero.shopNow") }}</button>
       </div>
 
@@ -30,6 +32,13 @@
 import logo2 from "@/assets/icons/logo-2.svg";
 import straw from "@/assets/images/straw.png";
 import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
 
 const { t } = useI18n();
+
+const router = useRouter();
+
+const goToAbout = () => {
+  router.push("/about");
+};
 </script>
