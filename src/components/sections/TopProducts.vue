@@ -65,7 +65,9 @@
         </div>
 
         <div class="text-center btn-wrapper">
-          <button class="btn btn-secondary">{{ t("common.viewMore") }}</button>
+          <button class="btn btn-secondary" @click="navigateTo('/products')">
+            {{ t("common.viewMore") }}
+          </button>
         </div>
       </template>
     </div>
@@ -89,6 +91,14 @@ import type { Recipe } from "@/types/recipe";
 
 import nextIcon from "@/assets/icons/next.svg";
 import prevIcon from "@/assets/icons/pre.svg";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const navigateTo = (path: string) => {
+  router.push(path);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 const { t } = useI18n();
 const modules = [Navigation, Autoplay];

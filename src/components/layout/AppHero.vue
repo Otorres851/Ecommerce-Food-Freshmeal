@@ -15,10 +15,13 @@
       <p>{{ t("hero.description") }}</p>
 
       <div>
-        <button class="btn btn-primary" @click="goToAbout">
+        <button class="btn btn-primary" @click="navigateTo('/about')">
           {{ t("hero.readMore") }}
         </button>
-        <button class="btn btn-secondary">{{ t("hero.shopNow") }}</button>
+
+        <button class="btn btn-secondary" @click="navigateTo('/products')">
+          {{ t("hero.shopNow") }}
+        </button>
       </div>
 
       <div class="hero-image">
@@ -38,7 +41,12 @@ const { t } = useI18n();
 
 const router = useRouter();
 
-const goToAbout = () => {
-  router.push("/about");
+const navigateTo = (path: string) => {
+  router.push(path);
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 };
 </script>
