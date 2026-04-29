@@ -142,7 +142,9 @@
           <div class="about-cta-v2-content">
             <h2>{{ t("aboutPage.ctaTitle") }}</h2>
             <p>{{ t("aboutPage.ctaText") }}</p>
-            <button class="btn btn-primary">{{ t("aboutPage.ctaBtn") }}</button>
+            <button class="btn btn-primary" @click="navigateTo('/products')">
+              {{ t("aboutPage.ctaBtn") }}
+            </button>
           </div>
 
           <div class="about-cta-v2-leaf">
@@ -167,6 +169,14 @@ import storyImage from "@/assets/images/yogurt.png";
 import team1 from "@/assets/images/team-1.jpg";
 import team2 from "@/assets/images/team-2.jpg";
 import team3 from "@/assets/images/team-3.jpg";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const navigateTo = (path: string) => {
+  router.push(path);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 const { t } = useI18n();
 

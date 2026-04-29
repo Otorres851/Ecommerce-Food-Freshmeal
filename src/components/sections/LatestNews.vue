@@ -33,7 +33,9 @@
       </div>
 
       <div class="text-center btn-wrapper">
-        <button class="btn btn-secondary">{{ t("common.viewAll") }}</button>
+        <button class="btn btn-secondary" @click="navigateTo('/products')">
+          {{ t("common.viewAll") }}
+        </button>
       </div>
     </div>
   </section>
@@ -44,6 +46,14 @@ import coffee from "@/assets/images/coffee.jpg";
 import donut from "@/assets/images/donut.jpg";
 import type { Article } from "@/types/article";
 import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const navigateTo = (path: string) => {
+  router.push(path);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 const { t } = useI18n();
 
