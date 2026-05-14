@@ -4,7 +4,7 @@
       <h1 class="section-heading">{{ t("sections.topProducts") }}</h1>
 
       <div v-if="loading" class="products-feedback">
-        Loading featured recipes..
+        Loading featured recipes...
       </div>
 
       <div v-else-if="errorMessage" class="products-feedback error">
