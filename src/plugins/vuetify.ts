@@ -14,6 +14,7 @@ export default createVuetify({
           light: "#F0F0F0",
           heaven: "#FFFFFF",
           footer: "#2D333F",
+          black: "#000000",
         },
       },
     },
